@@ -10,22 +10,28 @@ Install Anaconda https://docs.anaconda.com/free/anaconda/install/linux/
 1. Create a conda virtual environment 
 
 ```
-$ conda create --name rasa379
+$ conda create --name rasa
 ```
 
 2. Activate the virtual environment
 
 ```
-$ conda activate rasa379
+$ conda activate rasa
 ```
 
 3. Install supported Python version
 
 ```
-$ conda install python=3.7.9
+$ conda install python=3.8
 ```
 
-4. Install the Rasa and dependency packages:
+4. Upgrade pip
+
+```
+$ pip install --upgrade pip
+```
+
+5. Install the Rasa and dependency packages:
 
 ```
 $ pip install -r requirements.txt
@@ -36,7 +42,7 @@ This will install the bot and all of its requirements.
 ---
 
 **NOTE:**
-This bot should be used with python 3.7.
+This bot should be used with python 3.8.
 
 ---
 
