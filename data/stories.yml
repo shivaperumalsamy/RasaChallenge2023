@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: get weather update
+  steps:
+  - intent: get_weather_update
+  - action: utter_weather_response

@@ -89,3 +89,16 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: get_weather_update
+  examples: |
+    - What's the weather like today?
+    - Can you give me the weather forecast for tomorrow?
+    - What's the current temperature in [city]?
+    - Will it rain in [location] this weekend?
+    - Is it going to be sunny in [city]?
+    - What's the weather forecast for the next few days?
+    - Should I bring an umbrella today?
+    - Tell me about the weather conditions in [location]
+    - What's the humidity level in [city]?
+    - Can you give me the hourly weather forecast?
