@@ -76,4 +76,11 @@ Core/NLU server:
 $ python -m server run --enable-api --cors "*"
 ```
 
-### To run in ARM Mac Reference Link: https://forum.rasa.com/t/an-unofficial-guide-to-installing-rasa-on-an-m1-macbook/51342
+
+
+## Adding training data thru API
+
+1. the APIs endpoints are exposed in app.py
+
+2. run the app.py using `python app.py` and the service will be accessible in `http://localhost:8080/status`
+
