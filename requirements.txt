@@ -1,2 +1,4 @@
 rasa==3.6.2
 flask
+pyaml
+python-dotenv
