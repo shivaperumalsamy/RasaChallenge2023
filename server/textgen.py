@@ -22,7 +22,7 @@ def make_chat_request(prompt):
 
     data = {
       "model": "gpt-3.5-turbo",
-      "messages": [ {"role": "system", "content": "generate 10 training sentences for \""+prompt +" for nlu training in rasa\""}]
+      "messages": [ {"role": "system", "content": "generate 10 rasa nlu training utterances for \""+prompt +"\""}]
     };
 
     # TODO - COMMENTED BELOW LINES FOR DEV
@@ -34,10 +34,18 @@ def make_chat_request(prompt):
     print(nlu_response)
 
 
+    # data = {
+    #   "model": "gpt-3.5-turbo",
+    #   "messages": [ {"role": "user" ,"content": "intent name"}, {"role": "assistant", "content": nlu_response}]
+    # };
+
     data = {
       "model": "gpt-3.5-turbo",
-      "messages": [ {"role": "user" ,"content": "intent name"}, {"role": "assistant", "content": nlu_response}]
+      "messages": [ {"role": "system", "content": " generate 1 rasa intent name for \""+prompt +"\""}]
     };
+
+    
+   
 
     response = requests.post(API_URL, headers=headers, json=data)
     response.raise_for_status()
