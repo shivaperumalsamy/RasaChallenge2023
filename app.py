@@ -1,6 +1,7 @@
 from flask import Flask, request
 from server.textgen import make_chat_request
 from server.textembed import embed_nlu, embed_story, embed_domain
+from server.rasa_services import train_rasa_model
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -27,9 +28,9 @@ def train():
     embed_nlu(gen_nlu_training_data)
     embed_domain(gen_nlu_training_data, data['response'])
     embed_story(gen_nlu_training_data)
-
+    train_rasa_model()
     
-    return "Files generated successfully"
+    return "Rasa train completed successfully"
 
 
 
