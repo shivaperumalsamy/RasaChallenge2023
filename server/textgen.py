@@ -3,8 +3,15 @@ import requests
 import os
 import json
 import yake
+import re
 
 API_URL = 'https://api.openai.com/v1/chat/completions'
+
+
+def convert_to_snake_case(string):
+    # Replace capital letters with underscore + lowercase letters
+    converted = re.sub(r'(?<!^)(?=[A-Z])', '_', string).lower()
+    return converted
 
 def make_chat_request(prompt):
 
@@ -35,6 +42,22 @@ def make_chat_request(prompt):
     nlu_response = response.json()['choices'][0]['message']['content']
     print(nlu_response)
 
+
+    # THIS IS NOT NECESSARY AS WE ARE USING YAKE TO FIND THE INTENT NAME
+    
+    # data = {
+    #   "model": "gpt-3.5-turbo",
+    #   "messages": [ {"role": "user" ,"content": "intent name"}, {"role": "assistant", "content": nlu_response}]
+    # };
+
+    # response = requests.post(API_URL, headers=headers, json=data)
+    # response.raise_for_status()
+    
+    # intent_response = response.json()['choices'][0]['message']['content']
+    # print("original:",intent_response,"\n converted:",convert_to_snake_case(intent_response))
+
+    # END UNNECESSARY CODE
+
     # END ---- CHATGPT REQUEST
 
 #     nlu_response = """1. How do I file for a divorce?
@@ -53,7 +76,7 @@ def make_chat_request(prompt):
 
     gen_training_data = {
         "nlu": nlu_response,
-        "intent": intent_response
+        "intent": convert_to_snake_case(intent_response)
     }
     
     return gen_training_data

@@ -1,2 +1,5 @@
 rasa==3.6.2
 flask
+pyaml
+python-dotenv
+yake==0.4.8
