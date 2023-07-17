@@ -34,3 +34,12 @@ def train_rasa_model():
     output = './models/'
     rasa.train(domain, config, [training_files], output, fixed_model_name='latest_model')
 
+    obj = {
+    "model_file": "./models/latest_model.tar.gz"
+    }
+
+    r = requests.put(os.environ.get('HOST_NAME')+ '/model', data = json.dumps(obj))
+    # check status code for response received
+    # success code - 200
+    print(r)
+

@@ -46,33 +46,32 @@ def make_chat_request(prompt):
         print(nlu_response)
 
         # CHATBOT - Get intent name call
-        data = {
-        "model": "gpt-3.5-turbo",
-        "messages": [ {"role": "system", "content": " generate 1 rasa intent name for \""+prompt +"\""}]
-        };
+        # data = {
+        # "model": "gpt-3.5-turbo",
+        # "messages": [ {"role": "system", "content": " generate 1 rasa intent name for \""+prompt +"\""}]
+        # };
 
-        response = requests.post(API_URL, headers=headers, json=data)
-        response.raise_for_status()
+        # response = requests.post(API_URL, headers=headers, json=data)
+        # response.raise_for_status()
         
-        intent_response = response.json()['choices'][0]['message']['content']
-        print("original:",intent_response,"\n converted:",convert_to_snake_case(intent_response))
+        # intent_response = response.json()['choices'][0]['message']['content']
+        # print("original:",intent_response,"\n converted:",convert_to_snake_case(intent_response))
         
     else:
     
-        nlu_response = """1. How do I file for a divorce?
-    2. What are the steps to get a divorce?
-    3. Can you guide me on initiating the divorce process?
-    4. How can I legally end my marriage?
-    5. What is the procedure to obtain a divorce?
-    6. I need information on how to start the divorce proceedings.
-    7. Can you provide details on how to go about getting a divorce?
-    8. What documents do I need to file for a divorce?
-    9. How can I dissolve my marriage according to legal requirements?
-    10. Please explain the process of obtaining a divorce."""
+        nlu_response = """- How do I file for a divorce?
+    - What are the steps to get a divorce?
+    - Can you guide me on initiating the divorce process?
+    - How can I legally end my marriage?
+    - What is the procedure to obtain a divorce?
+    - I need information on how to start the divorce proceedings.
+    - Can you provide details on how to go about getting a divorce?
+    - What documents do I need to file for a divorce?
+    - How can I dissolve my marriage according to legal requirements?
+    - Please explain the process of obtaining a divorce."""
 
 
         intent_response = "divorce_process"
-
         time.sleep(1) # to just add some delay on hardcoded value
 
     # Construct return variable

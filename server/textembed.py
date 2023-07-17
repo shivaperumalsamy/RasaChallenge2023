@@ -13,7 +13,10 @@ def embed_nlu(nlu_json):
     yml_str += "  examples: |\n"
 
     for e in nlu_json['nlu'].split("\n"):
-        yml_str += re.sub(r'^\d+\.\s', "    - ", e) +"\n"
+        mod_str = re.sub(r'^\d+\.\s', "- ", e) +"\n"
+        yml_str += '    ' + mod_str
+
+    
     
     print("***** nlu *********")
     print(yml_str)
