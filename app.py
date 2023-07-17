@@ -2,11 +2,15 @@ from flask import Flask, request
 from server.textgen import make_chat_request
 from server.textembed import embed_nlu, embed_story, embed_domain
 from dotenv import load_dotenv
+from flask_cors import CORS
+import time
 
 load_dotenv()
 
 # Create a Flask web application
 app = Flask(__name__)
+
+CORS(app)
 
 @app.route('/')
 def root():
@@ -22,12 +26,12 @@ def train():
 
     data = request.json
     
-    gen_nlu_training_data = make_chat_request(data['request'])
+    # gen_nlu_training_data = make_chat_request(data['request'])
  
-    embed_nlu(gen_nlu_training_data)
-    embed_domain(gen_nlu_training_data, data['response'])
-    embed_story(gen_nlu_training_data)
-
+    # embed_nlu(gen_nlu_training_data)
+    # embed_domain(gen_nlu_training_data, data['response'])
+    # embed_story(gen_nlu_training_data)
+    time.sleep(1)
     
     return "Files generated successfully"
 
