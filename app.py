@@ -3,11 +3,14 @@ from server.textgen import make_chat_request
 from server.textembed import embed_nlu, embed_story, embed_domain
 from server.rasa_services import train_rasa_model
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 load_dotenv()
 
 # Create a Flask web application
 app = Flask(__name__)
+
+CORS(app)
 
 @app.route('/')
 def root():

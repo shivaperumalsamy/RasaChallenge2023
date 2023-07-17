@@ -3,3 +3,4 @@ flask
 pyaml
 python-dotenv
 yake==0.4.8
+flask_cors
