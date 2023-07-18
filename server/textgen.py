@@ -18,7 +18,7 @@ def make_chat_request(prompt):
 
     print("inside make_chat_request:::")
 
-    kw_extractor = yake.KeywordExtractor(top=1, stopwords=None)
+    kw_extractor = yake.KeywordExtractor(top=1, stopwords=None) # Extract intent from Yet Another Keyword Extractor (Yake)
     keywords = kw_extractor.extract_keywords(prompt)
     intent_response = keywords[0][0].replace(" ",'_').lower()
     print(intent_response)
@@ -45,7 +45,7 @@ def make_chat_request(prompt):
         nlu_response = response.json()['choices'][0]['message']['content']
         print(nlu_response)
 
-        # CHATBOT - Get intent name call
+        # CHATBOT - Get intent name call - OLD approach to get the intent name as well from the GPT
         # data = {
         # "model": "gpt-3.5-turbo",
         # "messages": [ {"role": "system", "content": " generate 1 rasa intent name for \""+prompt +"\""}]

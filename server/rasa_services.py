@@ -38,7 +38,7 @@ def train_rasa_model():
     "model_file": "./models/latest_model.tar.gz"
     }
 
-    r = requests.put(os.environ.get('HOST_NAME')+ '/model', data = json.dumps(obj))
+    r = requests.put(os.environ.get('HOST_NAME', "http://localhost:5005")+ '/model', data = json.dumps(obj))
     # check status code for response received
     # success code - 200
     print(r)
