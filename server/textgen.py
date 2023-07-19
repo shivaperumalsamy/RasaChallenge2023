@@ -5,9 +5,7 @@ import json
 import yake
 import re
 import time
-
-API_URL = 'https://api.openai.com/v1/chat/completions'
-
+from server.chatgpt import chat_gpt_request
 
 def convert_to_snake_case(string):
     # Replace capital letters with underscore + lowercase letters
@@ -20,42 +18,16 @@ def make_chat_request(prompt):
 
     kw_extractor = yake.KeywordExtractor(top=1, stopwords=None) # Extract intent from Yet Another Keyword Extractor (Yake)
     keywords = kw_extractor.extract_keywords(prompt)
-    intent_response = keywords[0][0].replace(" ",'_').lower()
+    intent_response = "get_" + keywords[0][0].replace(" ",'_').lower()
     print(intent_response)
-
-    TOKEN = os.environ.get('TOKEN')
     ENV = os.environ.get('ENV', "DEV")
 
     if "PROD" in ENV:
 
-        headers = {
-            'Content-Type': 'application/json',
-            'Authorization': f'Bearer {TOKEN}'
-        }
-
         # CHATBOT - Get list of utterances call
-        data = {
-        "model": "gpt-3.5-turbo",
-        "messages": [ {"role": "system", "content": "generate 10 rasa nlu training utterances for \""+prompt +"\""}]
-        };
-
-        
-        response = requests.post(API_URL, headers=headers, json=data)
-        response.raise_for_status()
-        nlu_response = response.json()['choices'][0]['message']['content']
+        data = "generate 10 rasa nlu training utterances for \""+prompt +"\""
+        nlu_response = chat_gpt_request(data)
         print(nlu_response)
-
-        # CHATBOT - Get intent name call - OLD approach to get the intent name as well from the GPT
-        # data = {
-        # "model": "gpt-3.5-turbo",
-        # "messages": [ {"role": "system", "content": " generate 1 rasa intent name for \""+prompt +"\""}]
-        # };
-
-        # response = requests.post(API_URL, headers=headers, json=data)
-        # response.raise_for_status()
-        
-        # intent_response = response.json()['choices'][0]['message']['content']
-        # print("original:",intent_response,"\n converted:",convert_to_snake_case(intent_response))
         
     else:
     
