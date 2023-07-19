@@ -2,6 +2,8 @@ from flask import Flask, request
 from server.textgen import make_chat_request
 from server.textembed import embed_nlu, embed_story, embed_domain
 from server.rasa_services import train_rasa_model
+from server.util import write_content_to_file
+# from server.kb import get_kb_answer
 from dotenv import load_dotenv
 from flask_cors import CORS
 
@@ -35,8 +37,20 @@ def train():
     
     return "Rasa train completed successfully"
 
+@app.route('/train-kb', methods=['POST'])
+def train_knowledgebase():
 
+    data = request.json
+    
+    write_content_to_file('data/train.txt', data['response'])
+    
+    return "Added content to the train file successfully"
 
+# @app.route('/kb', methods=['POST'])
+# def get_kb():
+#     data = request.json 
+#     response = get_kb_answer(data['request'])
+#     return response
 
 # Run the Flask application
 if __name__ == '__main__':
