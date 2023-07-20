@@ -54,7 +54,7 @@ pipeline:
     constrain_similarities: true
     retrieval_intent: chitchat
   - name: FallbackClassifier
-    threshold: 0.9
+    threshold: 0.95
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
@@ -78,7 +78,7 @@ policies:
   # # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
   - name: RulePolicy
-    core_fallback_threshold: 0.9
+    core_fallback_threshold: 0.95
     core_fallback_action_name: "action_default_fallback"
     enable_fallback_prediction: True
   - name: UnexpecTEDIntentPolicy

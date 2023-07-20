@@ -1,1 +1,11 @@
-MSD means multi syndrome disease
+question: How are Supreme Court Justices selected?
+
+answer: The President nominates someone for a vacancy on the Court and the Senate votes to confirm the nominee, which requires a simple majority. In this way, both the Executive and Legislative Branches of the federal government have a voice in the composition of the Supreme Court.
+
+question: Are there qualifications to be a Justice? Do you have to be a lawyer or attend law school to be a Supreme Court Justice?
+
+answer: The Constitution does not specify qualifications for Justices such as age, education, profession, or native-born citizenship. A Justice does not have to be a lawyer or a law school graduate, but all Justices have been trained in the law. Many of the 18th and 19th century Justices studied law under a mentor because there were few law schools in the country.
+
+question: How long is the term of a Supreme Court Justice?
+
+answer: The Constitution states that Justices "shall hold their Offices during good Behaviour." This means that the Justices hold office as long as they choose and can only be removed from office by impeachment.

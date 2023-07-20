@@ -31,7 +31,7 @@ def parse_file_and_get_answer(question):
 
     data = {
        
-        "prompt" : "Pick answers only based on the file content::\n " +file_content + "\n Question: " + question,
+        "prompt" : "Answer the question as truthfully as possible, and if you're unsure of the answer, say 'Sorry, I do not know', based on the file content::\n " +file_content + "\n Question: " + question,
         "max_tokens" : 100,
         "n" : 1,
         "stop" : None,
