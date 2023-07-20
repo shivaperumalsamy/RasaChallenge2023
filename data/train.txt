@@ -1,11 +1,54 @@
-question: How are Supreme Court Justices selected?
+1. How are Supreme Court Justices selected?
 
-answer: The President nominates someone for a vacancy on the Court and the Senate votes to confirm the nominee, which requires a simple majority. In this way, both the Executive and Legislative Branches of the federal government have a voice in the composition of the Supreme Court.
+The President nominates someone for a vacancy on the Court and the Senate votes to confirm the nominee, which requires a simple majority. In this way, both the Executive and Legislative Branches of the federal government have a voice in the composition of the Supreme Court.
 
-question: Are there qualifications to be a Justice? Do you have to be a lawyer or attend law school to be a Supreme Court Justice?
 
-answer: The Constitution does not specify qualifications for Justices such as age, education, profession, or native-born citizenship. A Justice does not have to be a lawyer or a law school graduate, but all Justices have been trained in the law. Many of the 18th and 19th century Justices studied law under a mentor because there were few law schools in the country.
+2. Are there qualifications to be a Justice? Do you have to be a lawyer or attend law school to be a Supreme Court Justice?
 
-question: How long is the term of a Supreme Court Justice?
+The Constitution does not specify qualifications for Justices such as age, education, profession, or native-born citizenship. A Justice does not have to be a lawyer or a law school graduate, but all Justices have been trained in the law. Many of the 18th and 19th century Justices studied law under a mentor because there were few law schools in the country.
 
-answer: The Constitution states that Justices "shall hold their Offices during good Behaviour." This means that the Justices hold office as long as they choose and can only be removed from office by impeachment.
+
+3. How long is the term of a Supreme Court Justice?
+
+The Constitution states that Justices "shall hold their Offices during good Behaviour." This means that the Justices hold office as long as they choose and can only be removed from office by impeachment.
+
+The Rasa LLM Community Challenge invites participants from all backgrounds and experience levels to design and develop innovative ways to use LLMs with Rasa. This challenge will provide a platform for developers to explore the vast potential of conversational AI, embrace creativity, and harness the power of coding to build something extraordinary.
+
+We’re looking for projects that fit into one or both of the following categories:
+
+Smarter Assistants: Text or voice assistants built on Rasa that leverage LLMs under the hood
+Builder Productivity: Innovative ways to leverage LLMs that make the life of Rasa developers and business users easier in the process to create, manage and optimize an assistant
+The requirements:
+
+Projects need to leverage Rasa Open Source or Rasa Pro
+Projects need to be licensed under a permissive open-source license (like Apache 2.0 or MIT)
+Individuals and teams can apply
+No cap on the number of team members
+One winner or individual representing a team for each prize
+
+
+Key dates:
+
+June 28th: Registrations open
+July 20th, 11:59 pm PT: Final submission of applications
+July 27th, 8 am PT: Announcement and demo of winners during our Online Show & Tell
+The prizes & jury
+
+The prizes:
+1st prize: 3,000 USD
+2nd prize: 1,500 USD
+3rd prize: 500 USD
+Everyone who submits a project: Rasa T-Shirt
+
+How projects will get evaluated:
+
+Concept innovation: Is your project unique in its approach and does it solve a specific problem in conversational AI?
+Technical implementation: What technology stack will you leverage to make your Al solution work? Are you leveraging closed-source or open-source LLMs?
+Ease of use: Does your project make it easier for an end user to leverage conversational AI, or easier for a developer to create, manage and optimize conversational AI?
+Our jury:
+
+Dr. Alan Nichol, Co-founder & CTO @ Rasa
+Rosana Ardila, Group Product Manager Developer Products @ Rasa
+Sonam Pankaj, Developer Advocate @ Rasa
+Dishant Gandhi, Senior Bot Developer @ ChatOwl and Rasa Super Hero
+Hans van Dam, CEO @ Conversation Design Institute
